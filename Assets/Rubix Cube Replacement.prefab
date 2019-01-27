@@ -108,7 +108,7 @@ MonoBehaviour:
   MoveSpeed: 14
   distToGround: 0.5
   jumpForce: 13.92
-  jumpspeed: 18
+  jumpspeed: 22.97
   Material: {fileID: 2100000, guid: 2f931db2731619a45aebef9433fb9350, type: 2}
   Material2: {fileID: 2100000, guid: 2f931db2731619a45aebef9433fb9350, type: 2}
   Material3: {fileID: 2100000, guid: 2f931db2731619a45aebef9433fb9350, type: 2}
@@ -137,5 +137,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0

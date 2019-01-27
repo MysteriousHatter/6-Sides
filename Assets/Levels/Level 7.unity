@@ -394,7 +394,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee3728b22aa0ed646a738ddbafde0cf5, type: 3}
   m_Name: 
@@ -504,11 +504,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 10.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 1167300155185762438, guid: 263bead87139c914883c696a346d552c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: -1.6730243
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 263bead87139c914883c696a346d552c, type: 3}
@@ -769,12 +764,12 @@ PrefabInstance:
     - target: {fileID: 7320823401143159389, guid: d1e5b957988b42e409b45a2a2ca44f97,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -101.9
+      value: -101.4
       objectReference: {fileID: 0}
     - target: {fileID: 7320823401143159389, guid: d1e5b957988b42e409b45a2a2ca44f97,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 72.6
+      value: 75.7
       objectReference: {fileID: 0}
     - target: {fileID: 7320823401143159389, guid: d1e5b957988b42e409b45a2a2ca44f97,
         type: 3}
@@ -1039,7 +1034,7 @@ PrefabInstance:
     - target: {fileID: 4205055804318848384, guid: f3a3163053b238f428b61fbbf8847408,
         type: 3}
       propertyPath: m_TagString
-      value: Red
+      value: White
       objectReference: {fileID: 0}
     - target: {fileID: 4205055804318848388, guid: f3a3163053b238f428b61fbbf8847408,
         type: 3}
@@ -1129,7 +1124,7 @@ PrefabInstance:
     - target: {fileID: 4208517793715115386, guid: 1c50015c1023a2a4c87fae0ed970df84,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.7
+      value: 10.4
       objectReference: {fileID: 0}
     - target: {fileID: 4208517793715115386, guid: 1c50015c1023a2a4c87fae0ed970df84,
         type: 3}
@@ -1536,11 +1531,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 10.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 1167300155185762438, guid: 263bead87139c914883c696a346d552c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: -1.9005505
       objectReference: {fileID: 0}
     - target: {fileID: 9121798845031285708, guid: 263bead87139c914883c696a346d552c,
         type: 3}

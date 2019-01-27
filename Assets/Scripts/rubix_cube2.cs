@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class rubix_cube : MonoBehaviour
+public class rubix_cube2 : MonoBehaviour
 {
-
     public int MoveSpeed = 2;
     public float distToGround = 0.5f;
     public float jumpForce = -90;
@@ -30,7 +28,7 @@ public class rubix_cube : MonoBehaviour
     KeyCode changecolo4;
     KeyCode changecolo5;
     KeyCode changecolo6;
-    enum State {Alive, Dead, Goal};
+    enum State { Alive, Dead, Goal };
     State Condition = State.Alive;
     [SerializeField] float levelLoadDelay = 2f;
 
@@ -65,7 +63,7 @@ public class rubix_cube : MonoBehaviour
     }
 
 
-private void TransationalInput()
+    private void TransationalInput()
     {
 
 
@@ -83,7 +81,7 @@ private void TransationalInput()
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                
+
                 Vector3 jumpVelocity = new Vector3(0f, jumpspeed, 0f);
                 rb.velocity = rb.velocity + jumpVelocity;
                 canJump = false;
@@ -92,7 +90,7 @@ private void TransationalInput()
         }
     }
 
-private void ColorChange()
+    private void ColorChange()
     {
 
         if (Input.GetKeyDown(KeyCode.A))
@@ -108,72 +106,72 @@ private void ColorChange()
                 Material.color = Color.white;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            if (Material2.color == Color.white)
-            {
-                currentcolor = "Blue";
-                Material2.color = color2;
-            }
-            else
-            {
-                currentcolor = "White";
-                Material2.color = Color.white;
-            }
+        /*      else if (Input.GetKeyDown(KeyCode.S))
+               {
+                   if (Material2.color == Color.white)
+                   {
+                       currentcolor = "Blue";
+                       Material2.color = color2;
+                   }
+                   else
+                   {
+                       currentcolor = "White";
+                       Material2.color = Color.white;
+                   }
 
-
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            if (Material3.color == Color.white)
-            {
-                currentcolor = "Green";
-                Material3.color = color3;
-            }
-            else
-            {
-                currentcolor = "White";
-                Material3.color = Color.white;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (Material4.color == Color.white)
-            {
-                currentcolor = "Yellow";
-                Material4.color = color4;
-            }
-            else
-            {
-                currentcolor = "White";
-                Material4.color = Color.white;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (Material5.color == Color.white)
-            {
-                currentcolor = "Orange";
-                Material5.color = color5;
-            }
-            else
-            {
-                currentcolor = "White";
-                Material5.color = Color.white;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.W))
-        {
-            if(Material6.color == Color.white)
-            {
-            currentcolor = "White";
-            Material6.color = color6;
-            }
-        }
+               }*/
+           /*    else if (Input.GetKeyDown(KeyCode.D))
+               {
+                   if (Material3.color == Color.white)
+                   {
+                       currentcolor = "Green";
+                       Material3.color = color3;
+                   }
+                   else
+                   {
+                       currentcolor = "White";
+                       Material3.color = Color.white;
+                   }
+               }*/
+               else if (Input.GetKeyDown(KeyCode.Q))
+               {
+                   if (Material4.color == Color.white)
+                   {
+                       currentcolor = "Yellow";
+                       Material4.color = color4;
+                   }
+                   else
+                   {
+                       currentcolor = "White";
+                       Material4.color = Color.white;
+                   }
+               }
+             /*  else if (Input.GetKeyDown(KeyCode.E))
+               {
+                   if (Material5.color == Color.white)
+                   {
+                       currentcolor = "Orange";
+                       Material5.color = color5;
+                   }
+                   else
+                   {
+                       currentcolor = "White";
+                       Material5.color = Color.white;
+                   }
+               }
+               else if (Input.GetKeyDown(KeyCode.W))
+               {
+                   if (Material6.color == Color.white)
+                   {
+                       currentcolor = "White";
+                       Material6.color = color6;
+                   }
+       
+    }*/
     }
-    
-    
-  void OnCollisionEnter(Collision collision)
+
+
+    void OnCollisionEnter(Collision collision)
     {
         if (Condition != State.Alive)
         {
@@ -184,12 +182,13 @@ private void ColorChange()
 
         if (collision.gameObject.tag == currentcolor)
         {
-   
+
             canJump = true;
         }
-        else if(collision.gameObject.tag == "Goal")
+        else if (collision.gameObject.tag == "Goal")
         {
             Debug.Log("You won");
+            LoadFirstLevel();
         }
         else
         {
@@ -207,11 +206,11 @@ private void ColorChange()
 
     private void LoadFirstLevel()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
     private void SuccessSequence()
     {
         Condition = State.Goal;
     }
-    
 }
+
